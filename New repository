@@ -1,0 +1,80 @@
+import React from "react";
+import { Card } from "@/components/ui/card";
+
+export default function Portfolio() {
+  return (
+    <div className="font-sans">
+      {/* Navbar */}
+      <nav className="bg-white shadow-md p-4 flex justify-between items-center sticky top-0 z-50">
+        <h1 className="text-xl font-bold">Akshat Rao</h1>
+        <ul className="flex gap-4 text-sm">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white text-center">
+        <h2 className="text-4xl font-bold mb-2">Hi, I'm Akshat Rao</h2>
+        <p className="text-lg">Aspiring Computer Engineer | DSA, ReactJS & Machine Learning Enthusiast</p>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="p-8 bg-gray-100">
+        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+        <p>
+          I'm a passionate computer engineering student with a strong interest in web development and artificial intelligence.
+          I enjoy building interactive web apps using ReactJS and constantly improving my skills in DSA and ML.
+        </p>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="p-8">
+        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-4">
+          <Card className="p-4">
+            <h3 className="font-bold">Personal Task Manager</h3>
+            <p className="text-sm text-gray-600">React-based app to manage daily tasks with deadlines and priorities.</p>
+            <a href="https://github.com/Akshatrao00/task-manager" className="text-blue-500 text-sm mt-2 inline-block">GitHub Repo</a>
+          </Card>
+          <Card className="p-4">
+            <h3 className="font-bold">Face Detection App</h3>
+            <p className="text-sm text-gray-600">Python + OpenCV project to detect faces in images using ML.</p>
+            <a href="https://github.com/Akshatrao00/face-detector" className="text-blue-500 text-sm mt-2 inline-block">GitHub Repo</a>
+          </Card>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="p-8 bg-gray-100">
+        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <li className="bg-white p-2 rounded shadow text-center">ReactJS</li>
+          <li className="bg-white p-2 rounded shadow text-center">JavaScript</li>
+          <li className="bg-white p-2 rounded shadow text-center">Tailwind CSS</li>
+          <li className="bg-white p-2 rounded shadow text-center">Python</li>
+          <li className="bg-white p-2 rounded shadow text-center">C++</li>
+          <li className="bg-white p-2 rounded shadow text-center">Git & GitHub</li>
+        </ul>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="p-8">
+        <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+        <form className="grid gap-4 max-w-md">
+          <input type="text" placeholder="Your Name" className="p-2 border rounded" />
+          <input type="email" placeholder="Your Email" className="p-2 border rounded" />
+          <textarea placeholder="Your Message" rows="4" className="p-2 border rounded" />
+          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white text-center p-4 mt-8">
+        <p>&copy; 2025 Akshat Rao. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
